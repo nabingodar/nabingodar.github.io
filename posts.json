@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "mountain-dawn",
+    "title": "A Mountain Dawn",
+    "date": "2026-05-12",
+    "location": "Nepal",
+    "tags": ["travel", "mountains"],
+    "excerpt": "Waking before sunrise to watch the mountains glow — a short reflection on stillness and perspective.",
+    "coverImage": "/images/hero.jpg",
+    "url": "/blog/mountain-dawn.html"
+  },
+  {
+    "slug": "tokyo-lessons",
+    "title": "Lessons from Tokyo",
+    "date": "2025-11-03",
+    "location": "Japan",
+    "tags": ["study", "life-abroad"],
+    "excerpt": "Living in Tokyo taught me how to hold space for silence and focus in the middle of motion.",
+    "coverImage": "/images/nabin.jpg",
+    "url": "/blog/tokyo-lessons.html"
+  },
+  {
+    "slug": "packing-light",
+    "title": "Packing Light — Tools for Travel and Thought",
+    "date": "2024-08-21",
+    "location": "Global",
+    "tags": ["essays", "travel-habits"],
+    "excerpt": "An essay on what to carry on a trip and what to leave at home — in luggage and in mind.",
+    "coverImage": "/images/placeholder-1.jpg",
+    "url": "/blog/packing-light.html"
+  }
+]
