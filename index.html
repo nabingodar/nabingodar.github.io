@@ -2,242 +2,135 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07131f">
+  <title>Nabin Godar | Personal Website</title>
+  <meta name="description" content="Official personal website of Nabin Godar">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07131f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<title>Nabin Godar | Personal Website</title>
+  <!-- preload hero LCP -->
+  <link rel="preload" as="image" href="/images/hero.jpg">
 
-<meta name="description" content="Official personal website of Nabin Godar">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="preload" as="image" href="images/hero.jpg">
-<link rel="stylesheet" href="css/style.css">
-
-<script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="logo">NABIN GODAR</div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="home">
+
+      <figure class="hero-figure" aria-hidden="false">
+        <img
+          src="/images/hero.jpg"
+          srcset="/images/hero.jpg 800w, /images/hero.jpg 1200w" 
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw"
+          alt="Panoramic travel landscape with sunrise over mountains">
+        <figcaption class="sr-only">Panoramic sunrise landscape.</figcaption>
+      </figure>
+
+      <div class="hero-content">
+        <h3>Hello, I'm</h3>
+        <h1>Nabin Godar</h1>
+        <h2><span id="typing" aria-live="polite"></span></h2>
+        <p>Exploring countries, ideas, technology and human understanding. Every destination teaches a lesson. Every challenge builds character. Every journey begins with curiosity.</p>
+        <div class="buttons">
+          <a href="#about" class="btn">Explore My Journey</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="quote">
+      <blockquote>"Travel changes you. As you move through this life and this world, you leave marks behind, and the world leaves marks on you."</blockquote>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About Me</h2>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+        <img src="/images/nabin.jpg" alt="Photo of Nabin Godar" style="width:110px;height:110px;object-fit:cover;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12)">
+        <p>I'm Nabin Godar from Nepal. My journey has taken me from Nepal to Japan and now toward the United Kingdom. I'm passionate about Business Economics, Artificial Intelligence, Technology, Critical Thinking and lifelong learning. I believe every culture teaches us a different way of thinking, and every journey expands our understanding of the world.</p>
+      </div>
+    </section>
+
+    <section id="journey" class="journey container">
+      <h2>My Journey</h2>
+      <div class="timeline">
+        <div class="card">
+          <h3>🇳🇵 Nepal</h3>
+          <p>Where my journey began.</p>
+        </div>
+
+        <div class="card">
+          <h3>🇯🇵 Japan</h3>
+          <p>My time in Japan was more than an educational experience; it was a life-changing journey. Living abroad taught me resilience, independence, and the importance of embracing new challenges. From learning a new language to studying information technology and working while managing everyday life, every experience contributed to my personal and professional growth. Japan remains an important part of my story and continues to influence the way I think, learn and approach new opportunities.</p>
+        </div>
+
+        <div class="card">
+          <h3>🇬🇧 United Kingdom</h3>
+          <p>Presently I am planning for foreign studies and applying for a student visa in the United Kingdom to further my education and experiences abroad.</p>
+        </div>
+
+        <div class="card">
+          <h3>🚀 Future</h3>
+          <p>Technology, entrepreneurship and global opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="container">
+      <h2>Travel Gallery</h2>
+      <p>Coming soon...</p>
+      <div class="gallery-grid" aria-hidden="true">
+        <img src="/images/nabin.jpg" alt="Nabin at a travel destination">
+        <img src="/images/placeholder-1.jpg" alt="Gallery placeholder 1">
+        <img src="/images/placeholder-2.jpg" alt="Gallery placeholder 2">
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <p>This portfolio website is my first project. Many more coming soon.</p>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Let's Connect</h2>
+      <p>Email: <a href="mailto:swatantra.core@gmail.com">swatantra.core@gmail.com</a></p>
+      <div class="social">
+        <a href="#" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="mailto:swatantra.core@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </section>
 
-<header>
+  </main>
 
-<nav class="navbar" aria-label="Main navigation">
+  <footer>
+    <p>© 2026 Nabin Godar • Built with HTML, CSS & JavaScript</p>
+  </footer>
 
-<div class="logo">
-
-NABIN GODAR
-
-</div>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#journey">Blogs</a></li>
-
-<li><a href="#gallery">Gallery</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<main id="main">
-
-<section class="hero" id="home">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
-
-<h3>Hello, I'm</h3>
-
-<h1>Nabin Godar</h1>
-
-<h2>
-
-<span id="typing"></span>
-
-</h2>
-
-<p>
-
-Exploring countries, ideas, technology and human understanding.
-
-Every destination teaches a lesson.
-
-Every challenge builds character.
-
-Every journey begins with curiosity.
-
-</p>
-
-<div class="buttons">
-
-<a href="#about" class="btn">Explore My Journey</a>
-
-<a href="#contact" class="btn secondary">Contact Me</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="quote">
-
-<blockquote>
-
-"Travel changes you. As you move through this life and this world,
-
-you leave marks behind, and the world leaves marks on you."
-
-</blockquote>
-
-</section>
-
-<section id="about" class="about">
-
-<div class="container">
-
-<h2>About Me</h2>
-
-<p>
-
-I'm Nabin Godar from Nepal.
-
-My journey has taken me from Nepal to Japan and now toward the United Kingdom.
-
-I'm passionate about Business Economics, Artificial Intelligence, Technology,
-
-Critical Thinking and lifelong learning.
-
-I believe every culture teaches us a different way of thinking,
-
-and every journey expands our understanding of the world.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="journey" class="journey">
-
-<h2>My Journey</h2>
-
-<div class="timeline">
-
-<div class="card">
-
-<h3>🇳🇵 Nepal</h3>
-
-<p>Where my journey began.</p>
-
-</div>
-
-<div class="card">
-
-<h3>🇯🇵 Japan</h3>
-
-<p>My time in Japan was more than an educational experience; it was a life-changing journey. Living abroad taught me resilience, independence, and the importance of embracing new challenges. From learning a new language to studying information technology and working while managing everyday life, every experience contributed to my personal and professional growth. Japan remains an important part of my story and continues to influence the way I think, learn and approach new opportunities.</p>
-
-</div>
-
-<div class="card">
-
-<h3>🇬🇧 United Kingdom</h3>
-
-<p>Presently I am again planning for foreign studies. I am applying for a student visa in the United Kingdom to further study and experience the wider world.</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚀 Future</h3>
-
-<p>Technology, entrepreneurship and global opportunities.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<h2>Travel Gallery</h2>
-
-<p>
-
-Coming soon...
-
-</p>
-
-</section>
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<p>
-
-This portfolio website is my first project.
-
-Many more coming soon.
-
-</p>
-
-</section>
-
-<section id="contact">
-
-<h2>Let's Connect</h2>
-
-<p>
-
-Email: <a href="mailto:swatantra.core@gmail.com">swatantra.core@gmail.com</a>
-
-</p>
-
-<div class="social">
-
-<a href="#" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-
-<a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-
-<a href="mailto:swatantra.core@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-
-</div>
-
-</section>
-
-</main>
-
-<footer>
-
-<p>
-
-© 2026 Nabin Godar • Built with HTML, CSS & JavaScript
-
-</p>
-
-</footer>
-
-<script src="js/script.js" defer></script>
-
+  <script src="/js/script.js" defer></script>
 </body>
 
 </html>
