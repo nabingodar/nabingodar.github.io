@@ -5,6 +5,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07131f">
 
 <title>Nabin Godar | Personal Website</title>
 
@@ -12,9 +13,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<link rel="preload" as="image" href="images/hero.jpg">
 <link rel="stylesheet" href="css/style.css">
 
 <script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous"></script>
@@ -23,9 +24,11 @@
 
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header>
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Main navigation">
 
 <div class="logo">
 
@@ -50,6 +53,8 @@ NABIN GODAR
 </nav>
 
 </header>
+
+<main id="main">
 
 <section class="hero" id="home">
 
@@ -147,12 +152,7 @@ and every journey expands our understanding of the world.
 
 <h3>🇯🇵 Japan</h3>
 
-<p>My time in Japan was more than an educational experience, it was a life changing journey.Living abroad taught me resilience, independence,
- and the importance od embracing new challenges. From learning a new language to studying information technology and working while managing everyday life,
- every experience contributed to my personal and professional growth. Japan remains an important part of my story and continues to influence the way I 
- think, learn and approach new opportunities. 
- 
-  .</p>
+<p>My time in Japan was more than an educational experience; it was a life-changing journey. Living abroad taught me resilience, independence, and the importance of embracing new challenges. From learning a new language to studying information technology and working while managing everyday life, every experience contributed to my personal and professional growth. Japan remains an important part of my story and continues to influence the way I think, learn and approach new opportunities.</p>
 
 </div>
 
@@ -160,7 +160,7 @@ and every journey expands our understanding of the world.
 
 <h3>🇬🇧 United Kingdom</h3>
 
-<p>Presently I am again planning for foreign studies. I am applying for student visa in United kingdom to further study and experience foreign world.</p>
+<p>Presently I am again planning for foreign studies. I am applying for a student visa in the United Kingdom to further study and experience the wider world.</p>
 
 </div>
 
@@ -208,21 +208,23 @@ Many more coming soon.
 
 <p>
 
-Email: swatantra.core@gmail.com
+Email: <a href="mailto:swatantra.core@gmail.com">swatantra.core@gmail.com</a>
 
 </p>
 
 <div class="social">
 
-<a href="#"><i class="fab fa-github"></i></a>
+<a href="#" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
 
-<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
 
-<a href="#"><i class="fas fa-envelope"></i></a>
+<a href="mailto:swatantra.core@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
 
 </div>
 
 </section>
+
+</main>
 
 <footer>
 
@@ -234,7 +236,7 @@ Email: swatantra.core@gmail.com
 
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 
 </body>
 
