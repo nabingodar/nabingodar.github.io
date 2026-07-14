@@ -95,6 +95,7 @@ document.querySelectorAll('.card, .hero-content, .quote, .blog-card').forEach(el
 // ==============================
 // Blog renderer (runs on /blog/ page if present)
 // Fetches posts.json and injects cards into .blog-grid
+// Sorted by date (newest first) and improved accessibility/focus
 // ==============================
 
 async function renderBlogList(){
@@ -106,22 +107,32 @@ async function renderBlogList(){
     if (!res.ok) throw new Error('posts.json not found');
     const posts = await res.json();
 
+    // sort by date descending
+    posts.sort((a,b) => new Date(b.date) - new Date(a.date));
+
     posts.forEach(post => {
       const card = document.createElement('article');
       card.className = 'blog-card';
-      card.innerHTML = `
-        <a href="${post.url}" class="card-link">
-          <div class="card-cover">
-            <img src="${post.coverImage}" alt="${post.title} cover image" loading="lazy">
-          </div>
-          <div class="card-body">
-            <div class="card-meta">${new Date(post.date).toLocaleDateString()} • ${post.location || ''}</div>
-            <h3 class="card-title">${post.title}</h3>
-            <p class="card-excerpt">${post.excerpt}</p>
-            <div class="card-tags">${(post.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-          </div>
-        </a>
+
+      // accessible link with descriptive label
+      const link = document.createElement('a');
+      link.className = 'card-link';
+      link.href = post.url;
+      link.setAttribute('aria-label', `Read: ${post.title}`);
+
+      link.innerHTML = `
+        <div class="card-cover">
+          <img src="${post.coverImage}" alt="${post.title} cover image" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-meta">${new Date(post.date).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}${post.location ? ' • ' + post.location : ''}</div>
+          <h3 class="card-title">${post.title}</h3>
+          <p class="card-excerpt">${post.excerpt}</p>
+          <div class="card-tags">${(post.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        </div>
       `;
+
+      card.appendChild(link);
       grid.appendChild(card);
       revealObserver.observe(card);
     });
